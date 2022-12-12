@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Randomixer</string>
+    <string name="app_definition">can do many operations with numbers</string>
+    <string name="btn_text_mix">MIX</string>
+    <string name="default_txt">0</string>
+    <string name="average_text_view">average</string>
+    <string name="sum_of_all_text_view">sum of all</string>
+    <string name="split_set_text_view">split the set</string>
+</resources>

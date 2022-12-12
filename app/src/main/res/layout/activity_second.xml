@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@drawable/sa_bground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:fontFamily="@font/courier_prime"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="61dp"
+        android:background="@drawable/rounded_corner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="194dp"
+        android:text="@string/average_text_view"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:fontFamily="@font/courier_prime"
+        android:textSize="20sp"
+        android:paddingStart="30dp"
+        />
+
+    <TextView
+        android:id="@+id/average_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:fontFamily="@font/courier_prime_bold"
+        android:text="@string/default_txt"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:layout_marginStart="300dp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="61dp"
+        android:background="@drawable/rounded_corner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="287dp"
+        android:text="@string/sum_of_all_text_view"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:fontFamily="@font/courier_prime"
+        android:textSize="20sp"
+        android:paddingStart="30dp"
+        />
+
+    <TextView
+        android:id="@+id/sum_all_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="297dp"
+        android:fontFamily="@font/courier_prime_bold"
+        android:text="@string/default_txt"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:layout_marginStart="300dp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="61dp"
+        android:background="@drawable/rounded_corner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:text="@string/split_set_text_view"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:fontFamily="@font/courier_prime"
+        android:textSize="20sp"
+        android:paddingStart="30dp"
+        />
+
+    <TextView
+        android:id="@+id/split_set_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        android:fontFamily="@font/courier_prime_bold"
+        android:text="@string/default_txt"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:layout_marginStart="300dp"/>
+    
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="512dp"
+        />
+
+</RelativeLayout>
