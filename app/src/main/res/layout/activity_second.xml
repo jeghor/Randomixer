@@ -40,7 +40,7 @@
         android:text="@string/default_txt"
         android:textColor="@color/white"
         android:textSize="32sp"
-        android:layout_marginStart="300dp"/>
+        android:layout_marginStart="275dp"/>
 
     <TextView
         android:layout_width="300dp"
@@ -65,7 +65,7 @@
         android:text="@string/default_txt"
         android:textColor="@color/white"
         android:textSize="32sp"
-        android:layout_marginStart="300dp"/>
+        android:layout_marginStart="255dp"/>
 
     <TextView
         android:layout_width="300dp"
@@ -90,13 +90,17 @@
         android:text="@string/default_txt"
         android:textColor="@color/white"
         android:textSize="32sp"
-        android:layout_marginStart="300dp"/>
+        android:layout_marginStart="275dp"/>
     
     <TextView
+        android:id="@+id/all_numbers"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="512dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center"
         />
 
 </RelativeLayout>

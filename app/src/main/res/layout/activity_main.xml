@@ -27,7 +27,40 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:letterSpacing="-0.10" />
-    
+
+    <TextView
+        android:id="@+id/calc_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/calc_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/calc_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:textAlignment="center"
+        />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mix_button"
         android:layout_width="180dp"
