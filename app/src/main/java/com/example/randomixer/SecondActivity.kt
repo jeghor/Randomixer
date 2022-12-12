@@ -12,18 +12,13 @@ class SecondActivity : AppCompatActivity() {
         val sumTextView = findViewById<TextView>(R.id.sum_all_text)
         val splitTextView = findViewById<TextView>(R.id.split_set_text)
         val allNumbersTextView = findViewById<TextView>(R.id.all_numbers)
-        var numbersText = ""
-        var counter = 0
-        val array =intent.getIntArrayExtra("array") as IntArray
-        while (counter<array.size) {
-            numbersText += "${array[counter]} "
-            counter++
-        }
+
+        val array = intent.getIntArrayExtra("array") as IntArray
 
         averageTextView.text = averageOfNumbers(array).toString()
         sumTextView.text = summaryOfAll(array).toString()
         splitTextView.text = splitByTwo(array).toString()
-        allNumbersTextView.text =  numbersText //array.contentToString()
+        allNumbersTextView.text = outputNumbers(array) //array.contentToString()
     }
 }
 
@@ -47,4 +42,14 @@ private fun splitByTwo(array: IntArray):Int{
     var residual = 0
     for (element in array) residual-=element
     return summary/residual
+}
+
+private fun outputNumbers(array: IntArray):String{
+    var numbersText = ""
+    var counter = 0
+    while (counter<array.size) {
+        numbersText += "${array[counter]} "
+        counter++
+    }
+    return numbersText
 }

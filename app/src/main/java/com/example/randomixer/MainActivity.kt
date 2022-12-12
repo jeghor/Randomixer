@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             val randomArray = IntArray(randomNumbOfElem())
             var counter = 0
             while (counter< randomArray.size){
-                randomArray[counter] = kotlin.random.Random.nextInt(500)
+                randomArray[counter] = Random.nextInt(500)
                 counter++
             }
             intent.putExtra("array",randomArray)
@@ -26,9 +27,9 @@ class MainActivity : AppCompatActivity() {
 }
 
 fun randomNumbOfElem(): Int {
-    var elCount = IntArray(kotlin.random.Random.nextInt(2,26))
-    while(elCount.size%2!= 0){
-        elCount = IntArray(kotlin.random.Random.nextInt(2,26))
+    var elCount = Random.nextInt(26)
+    while(elCount%2!= 0){
+        elCount = Random.nextInt(26)
     }
-    return elCount.size
+    return elCount
 }
