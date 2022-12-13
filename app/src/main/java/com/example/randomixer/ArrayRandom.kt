@@ -8,8 +8,14 @@ object ArrayRandom {
         val randomArray = IntArray(amountElements)
         var counter = 0
         while (counter< randomArray.size){
-            randomArray[counter] = Random.nextInt(500)
-            counter++
+            if (counter==0){
+                randomArray[counter] = Random.nextInt(500)
+                counter++
+            }
+            if (counter>0 && randomArray[counter]!=randomArray[counter-1]){
+                randomArray[counter] = Random.nextInt(500)
+                counter++
+            }
         }
         return randomArray
     }
