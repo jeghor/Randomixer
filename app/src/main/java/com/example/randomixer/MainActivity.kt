@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,22 +13,9 @@ class MainActivity : AppCompatActivity() {
 
         mixButton.setOnClickListener {
             val intent = Intent(this,SecondActivity::class.java)
-            val randomArray = IntArray(randomNumbOfElem())
-            var counter = 0
-            while (counter< randomArray.size){
-                randomArray[counter] = Random.nextInt(500)
-                counter++
-            }
+            val randomArray = ArrayRandom.randomFieldIntArray(ArrayRandom.randomNumbOfElem()) //using Singleton
             intent.putExtra("array",randomArray)
             startActivity(intent)
         }
     }
-}
-
-fun randomNumbOfElem(): Int {
-    var elCount = Random.nextInt(26)
-    while(elCount%2!= 0){
-        elCount = Random.nextInt(26)
-    }
-    return elCount
 }
