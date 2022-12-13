@@ -2,7 +2,10 @@ package com.example.randomixer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
+
+const val TAG = "Calculations"
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,11 +17,15 @@ class SecondActivity : AppCompatActivity() {
         val allNumbersTextView = findViewById<TextView>(R.id.all_numbers)
 
         val array = intent.getIntArrayExtra("array") as IntArray
-
-        averageTextView.text = averageOfNumbers(array).toString()
-        sumTextView.text = summaryOfAll(array).toString()
-        splitTextView.text = splitByTwo(array).toString()
-        allNumbersTextView.text = outputNumbers(array) //array.contentToString()
+        Log.i(TAG,"--------------------New calculations--------------------")
+        averageTextView.text = "${averageOfNumbers(array)}"
+        Log.i(TAG,"Average number of array is ${averageOfNumbers(array)}")
+        sumTextView.text = "${summaryOfAll(array)}"
+        Log.i(TAG,"Summary of all numbers in array is ${summaryOfAll(array)}")
+        splitTextView.text = "${splitByTwo(array)}"
+        Log.i(TAG,"Split two parts in array by two is ${splitByTwo(array)}")
+        allNumbersTextView.text = outputNumbers(array)
+        Log.i(TAG,"Numbers in array: ${array.contentToString()}")
     }
 }
 
