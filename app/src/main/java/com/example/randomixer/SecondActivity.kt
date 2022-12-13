@@ -37,11 +37,20 @@ private fun summaryOfAll(array: IntArray):Int{
 }
 
 private fun splitByTwo(array: IntArray):Int{
-    var summary = 0
-    for (element in array) summary+=element
-    var residual = 0
-    for (element in array) residual-=element
-    return summary/residual
+    val halfOfArray = array.size/2
+    var sumFirstPart = 0
+    var resSecondPart = 0
+    var index = 0
+    while (index<array.size){
+        if (index<halfOfArray){
+            sumFirstPart+=array[index]
+            index++
+        } else{
+            resSecondPart+=array[index]
+            index++
+        }
+    }
+    return sumFirstPart/resSecondPart
 }
 
 private fun outputNumbers(array: IntArray):String{
