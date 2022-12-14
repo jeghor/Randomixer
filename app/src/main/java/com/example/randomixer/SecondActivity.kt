@@ -17,15 +17,15 @@ class SecondActivity : AppCompatActivity() {
         val allNumbersTextView = findViewById<TextView>(R.id.all_numbers)
 
         val array = intent.getIntArrayExtra("array") as IntArray
-        Log.i(TAG,"--------------------New calculations--------------------")
+        Log.d(TAG,"--------------------New calculations--------------------")
         averageTextView.text = "${averageOfNumbers(array)}"
-        Log.i(TAG,"Average number of array is ${averageOfNumbers(array)}")
+        Log.d(TAG,"Average number of array is ${averageOfNumbers(array)}")
         sumTextView.text = "${summaryOfAll(array)}"
-        Log.i(TAG,"Summary of all numbers in array is ${summaryOfAll(array)}")
+        Log.d(TAG,"Summary of all numbers in array is ${summaryOfAll(array)}")
         splitTextView.text = "${splitByTwo(array)}"
-        Log.i(TAG,"Split two parts in array by two is ${splitByTwo(array)}")
+        Log.d(TAG,"Split two parts in array by two is ${splitByTwo(array)}")
         allNumbersTextView.text = outputNumbers(array)
-        Log.i(TAG,"Numbers in array: ${array.contentToString()}")
+        Log.d(TAG,"Numbers in array: ${array.contentToString()}")
     }
 }
 
