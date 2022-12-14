@@ -37,6 +37,7 @@ class SecondActivity : AppCompatActivity() {
             returnIntent.putExtra("sum", "${summaryOfAll(array)}")
             returnIntent.putExtra("split", "${splitByTwo(array)}")
             setResult(Activity.RESULT_OK,returnIntent)
+            Empty.setEmpty(0)
             finish()
         }
 
