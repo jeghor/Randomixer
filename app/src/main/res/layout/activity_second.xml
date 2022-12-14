@@ -103,4 +103,16 @@
         android:gravity="center"
         />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="@string/return_btn"
+        android:layout_below="@+id/all_numbers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_corner"
+        android:textColor="@color/white"
+        />
+
 </RelativeLayout>

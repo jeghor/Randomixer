@@ -1,8 +1,11 @@
 package com.example.randomixer
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 
 const val TAG = "Calculations"
@@ -15,6 +18,7 @@ class SecondActivity : AppCompatActivity() {
         val sumTextView = findViewById<TextView>(R.id.sum_all_text)
         val splitTextView = findViewById<TextView>(R.id.split_set_text)
         val allNumbersTextView = findViewById<TextView>(R.id.all_numbers)
+        val btn = findViewById<Button>(R.id.button)
 
         val array = intent.getIntArrayExtra("array") as IntArray
         Log.d(TAG,"--------------------New calculations--------------------")
@@ -26,6 +30,16 @@ class SecondActivity : AppCompatActivity() {
         Log.d(TAG,"Split two parts in array by two is ${splitByTwo(array)}")
         allNumbersTextView.text = outputNumbers(array)
         Log.d(TAG,"Numbers in array: ${array.contentToString()}")
+
+        btn.setOnClickListener {
+            val returnIntent = Intent()
+            returnIntent.putExtra("average","${averageOfNumbers(array)}")
+            returnIntent.putExtra("sum", "${summaryOfAll(array)}")
+            returnIntent.putExtra("split", "${splitByTwo(array)}")
+            setResult(Activity.RESULT_OK,returnIntent)
+            finish()
+        }
+
     }
 }
 
